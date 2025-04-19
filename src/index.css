@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body{
+  font-family: "PP Neue Montreal" , sans-serif;
+  background-color: #e3e3db;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p{
+  text-transform: uppercase;
+  font-family: "Akkurat Mono" , monospace;
+  font-size: 0.7rem;
+  
+}
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Akkurat Mono" , monospace;
+  font-size: 0.7rem;
+  color: black;
+}
+
+.projects, .loader, .locations{
+  /* flex:1; */
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* gap:2em; */
+  
+}
+.loader{
+  align-items: center;
+  gap:0;
+}
+.loader h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Druk" , sans-serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  line-height: 0.9;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(0deg, #3a3a3a , #3a3a3a 50% , #fff 0);
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  color: #3a3a3a;
+}
+
+.projects-header,
+.project-item,
+.locations-header,
+.location-item {
+  display: flex;
+  gap:2em;
+  opacity: 0;
+}
+.projects-header > *,
+.locations-header > *{
+  flex:1;
+}
+.locations{
+  align-items: center;
+}
+
+.locations-header ,
+.location-item{
+  width: 50%; 
+  
+}
+.project-item,
+.location-item{
+  color:#4f4f4f
+}
+
+.grid-row{
+  width: 100%;
+  display: flex;
+  gap: 1em;
+} 
+
+.img{
+  position: relative;
+  flex:1;
+  aspect-ratio: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+nav > *{
+  flex:1;
+}
+
+.nav-logo a{
+  font-family: "Druk", sans-serif;
+  font-size: 1.75rem;
+}
+.banner-img{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  width: 20%;
+  aspect-ratio: 4/5;
+}
+.intro-copy h3,
+.title h1{
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Druk" , sans-serif;
+  color: #000;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 0.9;
+  
+}
+.intro-copy h3,
+.title h1{
+  clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.intro-copy h3 .word,
+.title h1 .word{
+  display: inline-block;
+  position: relative;
+  will-change: transform;
+  margin-right: 0.1rem;
+}
